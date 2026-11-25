@@ -29,6 +29,7 @@ export default {
     },
     {
       id: 'privacy',
+      updated: 'Last updated: 25 November 2026',
       path: '/en/privacy-policy/',
       category: 'Privacy policy',
       description: 'Which personal data Mverifactu processes, why, for how long and how to exercise your rights.',
@@ -41,16 +42,18 @@ export default {
         <dt>If you have an account</dt><dd>Name, email, hashed password, the salon’s tax details, period of use and payments, to provide and invoice the service. Basis: the contract and our accounting and tax obligations.</dd>
         <dt>If you authorise sending with our certificate</dt><dd>Name and NIF of the signer, the signed document, date and IP, to prove the representation before AEAT. Basis: the authorisation and the related legal obligations.</dd>
         <dt>If you visit the website or the app</dt><dd>The server may log the IP, date and page requested, for security. Basis: legitimate interest in protecting the service.</dd>
+        <dt>If you visit mverifactu.com</dt><dd>We count page views on our own server, without cookies, to know how much and how the website is used. For each visit we store the date and time, the page, the type of device, the domain of the website or the campaign code of the link that brought you, if any, the country, only if the network serving the website provides it, and a visitor code. Basis: legitimate interest in knowing how the website is used and improving it.</dd>
       </dl>
-      <p>We use no analytics or advertising, we do not sell data and we make no automated decisions about you.</p>
+      <p>The visitor code is calculated from the IP, the browser details your browser sends (user agent) and a random value that changes every day. The statistics store neither the IP nor the browser details, and the code cannot be used to recognise you from one day to the next. We do not count known robots or pages that the browser loads in advance.</p>
+      <p>We use no third-party analytics services or advertising, we do not sell data and we make no automated decisions about you.</p>
       <h2>Data of the salon’s clients and staff</h2>
       <p>The salon is the controller of the data it enters in Mverifactu. We process it on its behalf under the <a href="/en/data-processing/">data processing agreement</a>. If you are a client of a salon, please contact that salon first.</p>
       <h2>Who receives the data</h2>
       <ul><li>The Spanish tax agency (AEAT), which receives the invoice records.</li><li>{host}, the server provider.</li><li>Our email provider, if you write to us.</li><li>Authorities and courts, when the law requires it.</li></ul>
       <h2>How long we keep it</h2>
-      <p>Enquiries, for as long as needed to deal with them. Account data, during the contract and then, blocked, for the legal limitation periods. Invoice records, for the period set by law.</p>
+      <p>Enquiries, for as long as needed to deal with them. Account data, during the contract and then, blocked, for the legal limitation periods. Invoice records, for the period set by law. Visit statistics, 2 years.</p>
       <h2>Your rights</h2>
-      <p>You can ask for access, rectification, erasure, objection, restriction and portability by writing to <a href="mailto:{email}">{email}</a>. We may ask you to confirm your identity. If you disagree with the answer, you can complain to the <a href="https://www.aepd.es">Spanish Data Protection Agency</a>.</p>
+      <p>You can ask for access, rectification, erasure, objection, restriction and portability by writing to <a href="mailto:{email}">{email}</a>. We may ask you to confirm your identity. As the visit statistics carry neither your name nor your IP, we normally cannot tell which ones are yours. If you disagree with the answer, you can complain to the <a href="https://www.aepd.es">Spanish Data Protection Agency</a>.</p>
       <h2>Security</h2>
       <p>The connection to the app is encrypted with HTTPS. Passwords are stored as hashes and digital certificates are encrypted on the server. Each salon’s data is kept apart.</p>`,
     },
@@ -85,12 +88,14 @@ export default {
     },
     {
       id: 'cookies',
+      updated: 'Last updated: 25 November 2026',
       path: '/en/cookies/',
       category: 'Cookies',
       description: 'This website uses no cookies. What the Mverifactu app stores on your device and how to delete it.',
       body: `
       <h2>This website uses no cookies</h2>
-      <p>The Mverifactu website sets no cookies and stores no data in your browser. It loads no analytics, advertising or third-party content. The typefaces come from our own server. That is why there is no cookie banner.</p>
+      <p>The Mverifactu website sets no cookies and stores no data in your browser. It loads no third-party analytics tools, advertising or content. The typefaces come from our own server. That is why there is no cookie banner.</p>
+      <p>We count visits on our own server, without cookies and without storing the IP. The <a href="/en/privacy-policy/">privacy policy</a> explains this.</p>
       <h2>What the app stores</h2>
       <p>The app uses no advertising or analytics cookies. It stores on the device only what it needs to work:</p>
       <dl class="article-definitions"><dt>Session</dt><dd>Keeps you logged in until you log out.</dd><dt>Language and appearance</dt><dd>Remember what you chose on that device.</dd><dt>Printer</dt><dd>Remembers the printer and its settings.</dd></dl>

@@ -29,6 +29,7 @@ export default {
     },
     {
       id: 'privacy',
+      updated: 'Cập nhật ngày 25/11/2026',
       path: '/vi/chinh-sach-bao-mat/',
       category: 'Chính sách bảo mật',
       description: 'Mverifactu dùng dữ liệu cá nhân nào, để làm gì, giữ bao lâu và quyền của bạn.',
@@ -41,16 +42,18 @@ export default {
         <dt>Khi bạn có tài khoản</dt><dd>Tên, email, mật khẩu dạng hash, thông tin thuế của tiệm, thời hạn sử dụng và thanh toán, để cung cấp và xuất hóa đơn dịch vụ. Cơ sở: hợp đồng và nghĩa vụ kế toán, thuế.</dd>
         <dt>Khi bạn ủy quyền gửi bằng chứng thư của chúng tôi</dt><dd>Tên và NIF người ký, bản đã ký, ngày và IP, để chứng minh việc đại diện trước AEAT. Cơ sở: giấy ủy quyền và nghĩa vụ pháp lý kèm theo.</dd>
         <dt>Khi bạn mở website hoặc app</dt><dd>Máy chủ có thể ghi IP, thời gian và trang được mở để bảo mật. Cơ sở: lợi ích chính đáng trong việc bảo vệ dịch vụ.</dd>
+        <dt>Khi bạn xem mverifactu.com</dt><dd>Chúng tôi đếm lượt xem trang trên máy chủ của mình, không dùng cookie, để biết website được xem nhiều hay ít và được dùng thế nào. Mỗi lượt xem lưu ngày giờ, trang được xem, loại thiết bị, tên miền của trang web hoặc mã chiến dịch của liên kết đã dẫn bạn đến (nếu có), quốc gia (chỉ khi mạng phục vụ website cung cấp) và một mã khách. Cơ sở: lợi ích chính đáng trong việc biết website được dùng thế nào và cải thiện website.</dd>
       </dl>
-      <p>Chúng tôi không dùng công cụ phân tích hay quảng cáo, không bán dữ liệu và không ra quyết định tự động về bạn.</p>
+      <p>Mã khách được tính từ IP, thông tin trình duyệt mà trình duyệt gửi (user agent) và một giá trị ngẫu nhiên thay đổi mỗi ngày. Số liệu thống kê không lưu IP và thông tin trình duyệt, và mã này không dùng để nhận ra bạn từ ngày này sang ngày khác được. Chúng tôi không đếm các robot đã biết và các trang mà trình duyệt tải trước.</p>
+      <p>Chúng tôi không dùng dịch vụ phân tích của bên thứ ba hay quảng cáo, không bán dữ liệu và không ra quyết định tự động về bạn.</p>
       <h2>Dữ liệu khách và thợ của tiệm</h2>
       <p>Tiệm chịu trách nhiệm về dữ liệu mà tiệm nhập vào Mverifactu. Chúng tôi xử lý thay cho tiệm theo <a href="/vi/xu-ly-du-lieu/">thỏa thuận xử lý dữ liệu</a>. Nếu bạn là khách của một tiệm, hãy liên hệ tiệm đó trước.</p>
       <h2>Ai nhận dữ liệu</h2>
       <ul><li>Agencia Tributaria (AEAT), nơi nhận bản ghi hóa đơn.</li><li>{host}, nhà cung cấp máy chủ.</li><li>Nhà cung cấp email của chúng tôi, khi bạn gửi email.</li><li>Cơ quan nhà nước và tòa án, khi luật yêu cầu.</li></ul>
       <h2>Thời gian lưu</h2>
-      <p>Email hỏi thông tin được giữ trong thời gian cần để trả lời. Dữ liệu tài khoản được giữ trong thời gian hợp đồng, sau đó được khóa lại trong thời hiệu luật định. Bản ghi hóa đơn được giữ theo thời hạn luật quy định.</p>
+      <p>Email hỏi thông tin được giữ trong thời gian cần để trả lời. Dữ liệu tài khoản được giữ trong thời gian hợp đồng, sau đó được khóa lại trong thời hiệu luật định. Bản ghi hóa đơn được giữ theo thời hạn luật quy định. Số liệu thống kê lượt xem được giữ 2 năm.</p>
       <h2>Quyền của bạn</h2>
-      <p>Bạn có thể yêu cầu xem, sửa, xóa, phản đối, hạn chế xử lý và chuyển dữ liệu qua <a href="mailto:{email}">{email}</a>. Chúng tôi có thể yêu cầu xác nhận danh tính. Nếu không đồng ý với câu trả lời, bạn có thể khiếu nại đến <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
+      <p>Bạn có thể yêu cầu xem, sửa, xóa, phản đối, hạn chế xử lý và chuyển dữ liệu qua <a href="mailto:{email}">{email}</a>. Chúng tôi có thể yêu cầu xác nhận danh tính. Vì số liệu thống kê lượt xem không có tên và IP của bạn, thông thường chúng tôi không biết lượt xem nào là của bạn. Nếu không đồng ý với câu trả lời, bạn có thể khiếu nại đến <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
       <h2>Bảo mật</h2>
       <p>Kết nối với app được mã hóa HTTPS. Mật khẩu lưu dạng hash, chứng thư số được mã hóa trên máy chủ. Dữ liệu từng tiệm được tách riêng.</p>`,
     },
@@ -85,12 +88,14 @@ export default {
     },
     {
       id: 'cookies',
+      updated: 'Cập nhật ngày 25/11/2026',
       path: '/vi/cookie/',
       category: 'Cookie',
       description: 'Website này không dùng cookie. App Mverifactu lưu gì trên thiết bị và cách xóa.',
       body: `
       <h2>Website này không dùng cookie</h2>
-      <p>Website Mverifactu không tạo cookie và không lưu dữ liệu trong trình duyệt. Không có công cụ phân tích, quảng cáo hay nội dung của bên thứ ba. Phông chữ nằm trên máy chủ của chúng tôi. Vì vậy website không có thông báo cookie.</p>
+      <p>Website Mverifactu không tạo cookie và không lưu dữ liệu trong trình duyệt. Website không tải công cụ phân tích, quảng cáo hay nội dung của bên thứ ba. Phông chữ nằm trên máy chủ của chúng tôi. Vì vậy website không có thông báo cookie.</p>
+      <p>Chúng tôi đếm lượt xem trên máy chủ của mình, không dùng cookie và không lưu IP. Chi tiết có trong <a href="/vi/chinh-sach-bao-mat/">chính sách bảo mật</a>.</p>
       <h2>App lưu những gì</h2>
       <p>App không dùng cookie quảng cáo hay phân tích. App chỉ lưu trên thiết bị những thứ cần để hoạt động:</p>
       <dl class="article-definitions"><dt>Phiên đăng nhập</dt><dd>Giữ đăng nhập cho đến khi bạn đăng xuất.</dd><dt>Ngôn ngữ và giao diện</dt><dd>Nhớ lựa chọn của bạn trên thiết bị đó.</dd><dt>Máy in</dt><dd>Nhớ máy in và cài đặt của máy in.</dd></dl>

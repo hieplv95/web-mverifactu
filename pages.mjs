@@ -193,7 +193,7 @@ function legalContent(page, email) {
       <nav class="breadcrumbs" aria-label="${t.articleUi.breadcrumbs}"><a href="${t.home}">${t.articleUi.home}</a>${icon('chevron')}<span aria-current="page">${page.category}</span></nav>
       <h1>${page.heading}</h1><p>${page.description}</p>
     </div></section>
-    <div class="container article-layout"><article class="article-content">${body}<p class="legal-updated">${legal.updated}. ${legal.precedence}</p></article>
+    <div class="container article-layout"><article class="article-content">${body}<p class="legal-updated">${page.updated ?? legal.updated}. ${legal.precedence}</p></article>
     <aside><nav class="related legal-related" aria-label="${legal.navLabel}"><h2>${legal.navLabel}</h2>${legal.pages.map(({ path, category }) => `<a href="${path}"${path === page.path ? ' aria-current="page"' : ''}>${category}${icon('arrow')}</a>`).join('')}</nav></aside></div>`;
 }
 

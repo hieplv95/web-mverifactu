@@ -29,6 +29,7 @@ export default {
     },
     {
       id: 'privacy',
+      updated: 'Última actualización: 25 de noviembre de 2026',
       path: '/politica-de-privacidad/',
       category: 'Política de privacidad',
       description: 'Qué datos personales trata Mverifactu, para qué, durante cuánto tiempo y cómo ejercer tus derechos.',
@@ -41,16 +42,18 @@ export default {
         <dt>Si tienes una cuenta</dt><dd>Nombre, email, contraseña en forma de hash, datos fiscales del salón, periodo de uso y pagos, para prestar el servicio y facturarlo. Base: el contrato y nuestras obligaciones contables y fiscales.</dd>
         <dt>Si autorizas el envío con nuestro certificado</dt><dd>Nombre y NIF de quien firma, documento firmado, fecha e IP, para acreditar la representación ante la AEAT. Base: la autorización y las obligaciones legales asociadas.</dd>
         <dt>Si visitas la web o la app</dt><dd>El servidor puede registrar la IP, la fecha y la página pedida, por seguridad. Base: interés legítimo en proteger el servicio.</dd>
+        <dt>Si visitas mverifactu.com</dt><dd>Contamos las páginas vistas en nuestro propio servidor, sin cookies, para saber cuánto y cómo se usa la web. De cada visita guardamos la fecha y la hora, la página, el tipo de dispositivo, el dominio de la web o el código de campaña del enlace que te trajo, si lo hay, el país, solo si la red que sirve la web lo indica, y un código de visitante. Base: interés legítimo en conocer el uso de la web y mejorarla.</dd>
       </dl>
-      <p>No usamos analítica ni publicidad, no vendemos datos y no tomamos decisiones automatizadas sobre ti.</p>
+      <p>El código de visitante se calcula con la IP, los datos del navegador que este envía (user agent) y un valor aleatorio que cambia cada día. Las estadísticas no guardan la IP ni los datos del navegador, y el código no sirve para reconocerte de un día para otro. No contamos los robots conocidos ni las páginas que el navegador carga por adelantado.</p>
+      <p>No usamos servicios de analítica de terceros ni publicidad, no vendemos datos y no tomamos decisiones automatizadas sobre ti.</p>
       <h2>Datos de los clientes y del equipo del salón</h2>
       <p>De los datos que el salón introduce en Mverifactu es responsable el salón. Nosotros los tratamos por su cuenta, según el <a href="/encargado-del-tratamiento/">acuerdo de encargado del tratamiento</a>. Si eres cliente de un salón, dirígete primero a ese salón.</p>
       <h2>Quién recibe los datos</h2>
       <ul><li>La Agencia Tributaria (AEAT), que recibe los registros de facturación.</li><li>{host}, proveedor del servidor.</li><li>Nuestro proveedor de correo, si nos escribes.</li><li>Autoridades y tribunales, cuando la ley lo exija.</li></ul>
       <h2>Cuánto tiempo los guardamos</h2>
-      <p>Las consultas, el tiempo necesario para atenderlas. Los datos de la cuenta, mientras dure el contrato y después, bloqueados, durante los plazos legales de prescripción. Los registros de facturación, durante el plazo que fija la ley.</p>
+      <p>Las consultas, el tiempo necesario para atenderlas. Los datos de la cuenta, mientras dure el contrato y después, bloqueados, durante los plazos legales de prescripción. Los registros de facturación, durante el plazo que fija la ley. Las estadísticas de visitas, 2 años.</p>
       <h2>Tus derechos</h2>
-      <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <a href="mailto:{email}">{email}</a>. Podemos pedirte que confirmes tu identidad. Si no estás de acuerdo con la respuesta, puedes reclamar ante la <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
+      <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <a href="mailto:{email}">{email}</a>. Podemos pedirte que confirmes tu identidad. Como las estadísticas de visitas no llevan tu nombre ni tu IP, normalmente no podemos saber cuáles son tuyas. Si no estás de acuerdo con la respuesta, puedes reclamar ante la <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
       <h2>Seguridad</h2>
       <p>La conexión con la app va cifrada con HTTPS. Las contraseñas se guardan como hash, y los certificados electrónicos, cifrados en el servidor. Los datos de cada salón están separados.</p>`,
     },
@@ -85,12 +88,14 @@ export default {
     },
     {
       id: 'cookies',
+      updated: 'Última actualización: 25 de noviembre de 2026',
       path: '/politica-de-cookies/',
       category: 'Cookies',
       description: 'Esta web no usa cookies. Qué guarda la app de Mverifactu en tu dispositivo y cómo borrarlo.',
       body: `
       <h2>Esta web no usa cookies</h2>
-      <p>La web de Mverifactu no instala cookies ni guarda datos en tu navegador. No carga analítica, publicidad ni contenido de terceros. Las tipografías se sirven desde nuestro propio servidor. Por eso no ves un aviso de cookies.</p>
+      <p>La web de Mverifactu no instala cookies ni guarda datos en tu navegador. No carga herramientas de analítica, publicidad ni contenido de terceros. Las tipografías se sirven desde nuestro propio servidor. Por eso no ves un aviso de cookies.</p>
+      <p>Contamos las visitas en nuestro propio servidor, sin cookies y sin guardar la IP. Lo explicamos en la <a href="/politica-de-privacidad/">política de privacidad</a>.</p>
       <h2>Qué guarda la app</h2>
       <p>La app no usa cookies publicitarias ni de analítica. Guarda en el dispositivo lo imprescindible para funcionar:</p>
       <dl class="article-definitions"><dt>Sesión</dt><dd>Mantiene tu acceso hasta que sales.</dd><dt>Idioma y aspecto</dt><dd>Recuerdan lo que has elegido en ese dispositivo.</dd><dt>Impresora</dt><dd>Recuerda la impresora y sus ajustes.</dd></dl>
