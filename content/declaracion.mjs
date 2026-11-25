@@ -3,8 +3,10 @@
  * App là bản gốc: khi app đổi phiên bản hoặc đã ký thì cập nhật file này.
  * Luôn là tiếng Tây Ban Nha vì là văn bản chính thức.
  */
+import { app } from './links.mjs';
+
 export const signature = { date: null, place: null };
-export const appUrl = 'https://app.mverifactu.com/declaracion';
+export const appUrl = `${app}/declaracion`;
 export const title = 'Declaración responsable del sistema informático de facturación';
 
 export const items = [

@@ -1,7 +1,7 @@
 import { company } from './content/company.mjs';
 import { annex, appUrl, items, signature, title as declarationTitle } from './content/declaracion.mjs';
 import { defaultLanguage, languages } from './content/index.mjs';
-import { aeat } from './content/links.mjs';
+import { aeat, app } from './content/links.mjs';
 import { featuredPlan, license, plans, vatRate } from './content/pricing.mjs';
 import { qrPath, qrSize } from './qr.mjs';
 
@@ -292,6 +292,7 @@ export function layout(page, { origin, email }) {
       ${brand(t)}
       <nav class="site-nav" id="site-nav" aria-label="${ui.menuLabel}">
         ${Object.entries(ui.nav).map(([id, label]) => `<a href="${t.home}#${id}">${label}</a>`).join('')}
+        <a class="button login" href="${app}/">${ui.login}</a>
         <a class="button" href="${trialLink(t, email)}">${ui.trial}</a>
       </nav>
       ${languageNav(page)}

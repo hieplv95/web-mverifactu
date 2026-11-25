@@ -17,6 +17,7 @@ export default {
     menuClose: 'Cerrar menú',
     language: 'Idioma',
     nav: { invoices: 'Facturas', reports: 'Informes', pricing: 'Precios', guides: 'Guías', faq: 'Preguntas' },
+    login: 'Iniciar sesión',
     trial: 'Prueba de 14 días',
     trialSubject: 'Mverifactu: prueba de 14 días',
     socialAlt: 'Mverifactu: un toque, imprime y envía a la AEAT',

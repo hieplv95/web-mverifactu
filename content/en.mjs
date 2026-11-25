@@ -17,6 +17,7 @@ export default {
     menuClose: 'Close menu',
     language: 'Language',
     nav: { invoices: 'Invoices', reports: 'Reports', pricing: 'Pricing', guides: 'Guides', faq: 'FAQ' },
+    login: 'Log in',
     trial: '14-day trial',
     trialSubject: 'Mverifactu: 14-day trial',
     socialAlt: 'Mverifactu: one tap, print the invoice, send it to AEAT',

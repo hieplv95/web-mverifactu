@@ -1,5 +1,7 @@
 const base = 'https://sede.agenciatributaria.gob.es/Sede/iva';
 
+export const app = 'https://app.mverifactu.com';
+
 export const aeat = {
   verifactu: `${base}/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/sistemas-verifactu.html`,
   qr: `${base}/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/posibilidad-remision-informacion-factura-parte-receptor.html`,

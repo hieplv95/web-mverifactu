@@ -17,6 +17,7 @@ export default {
     menuClose: 'Đóng menu',
     language: 'Ngôn ngữ',
     nav: { invoices: 'Hóa đơn', reports: 'Báo cáo', pricing: 'Bảng giá', guides: 'Hướng dẫn', faq: 'Hỏi đáp' },
+    login: 'Đăng nhập',
     trial: 'Dùng thử 14 ngày',
     trialSubject: 'Mverifactu: dùng thử 14 ngày',
     socialAlt: 'Mverifactu: một lần bấm, in hóa đơn, gửi AEAT',

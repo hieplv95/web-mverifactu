@@ -24,7 +24,7 @@ Giá nằm trong `content/pricing.mjs` (chưa gồm IVA, tính bằng cent), gi�
 
 Trang pháp lý nằm trong `content/legal/` (bản tiếng Tây Ban Nha là bản chính). Thông tin công ty ở `content/company.mjs`. `content/declaracion.mjs` chép từ app `nails-pos`, cập nhật khi app đổi phiên bản hoặc đã ký.
 
-`site.json` chứa URL chính thức và email liên hệ. Khi chuyển tên miền, cập nhật `url` hoặc đặt biến `SITE_URL` khi build. Trang tĩnh, canonical, Open Graph, dữ liệu có cấu trúc, `sitemap.xml` và `robots.txt` được tạo cùng lúc. URL xem riêng của Sites yêu cầu đăng nhập. Khi có URL công khai, xác minh tên miền trong Google Search Console và gửi `/sitemap.xml` để Google có thể phát hiện các trang.
+`site.json` chứa URL chính thức và email liên hệ. Khi chuyển tên miền, cập nhật `url` hoặc đặt biến `SITE_URL` khi build. Địa chỉ app (nút đăng nhập) nằm ở `content/links.mjs`. Trang tĩnh, canonical, Open Graph, dữ liệu có cấu trúc, `sitemap.xml` và `robots.txt` được tạo cùng lúc. Sau khi xuất bản, xác minh tên miền trong Google Search Console và gửi `/sitemap.xml` để Google có thể phát hiện các trang.
 
 Email mặc định dùng địa chỉ công khai của Nails Trendy. Bản minh họa trên trang chủ chạy trong trình duyệt và dùng dữ liệu mẫu.
 
