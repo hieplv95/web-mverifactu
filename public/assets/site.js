@@ -6,7 +6,7 @@ const menu = document.querySelector('#site-nav');
 function showMenu(open) {
   menu.classList.toggle('open', open);
   menuButton.setAttribute('aria-expanded', String(open));
-  menuButton.querySelector('.sr-only').textContent = open ? 'Đóng menu' : 'Mở menu';
+  menuButton.querySelector('.sr-only').textContent = open ? menuButton.dataset.close : menuButton.dataset.open;
 }
 
 menuButton.addEventListener('click', () => showMenu(!menu.classList.contains('open')));
@@ -20,62 +20,65 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+for (const badge of document.querySelectorAll('[data-until]')) {
+  const days = Math.ceil((new Date(`${badge.dataset.until}T00:00:00`) - Date.now()) / 864e5);
+  badge.textContent = days > 1 ? badge.dataset.days.replace('{n}', days) : days === 1 ? badge.dataset.day : badge.dataset.past;
+  badge.hidden = false;
+}
+
 const demo = document.querySelector('[data-demo]');
 if (demo) initializeDemo(demo);
 
 function initializeDemo(root) {
   const services = [...root.querySelectorAll('[data-service]')];
-  const summary = root.querySelector('.demo-summary .totals');
-  const submit = root.querySelector('[data-receipt]');
-  const dialog = root.querySelector('dialog');
-  const receiptItems = root.querySelector('[data-receipt-items]');
-  const receiptTotals = root.querySelector('[data-receipt-totals]');
-  const money = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' });
-  const format = (cents) => money.format(cents / 100);
+  const submit = root.querySelector('[data-issue]');
+  const status = root.querySelector('[data-status]');
+  const paper = root.querySelector('[data-paper]');
+  const format = (cents) => `${(cents / 100).toFixed(2).replace('.', ',')} €`;
+  const setText = (selector, text) => root.querySelectorAll(selector).forEach((element) => { element.textContent = text; });
 
-  function selectedServices() {
-    return services.filter((service) => service.getAttribute('aria-pressed') === 'true');
+  function line(name, amount) {
+    const row = document.createElement('p');
+    row.className = 'line';
+    row.append(...[name, amount].map((text) => Object.assign(document.createElement('span'), { textContent: text })));
+    return row;
   }
 
-  function updateSummary() {
-    const total = selectedServices().reduce((sum, service) => sum + Number(service.dataset.cents), 0);
+  function update() {
+    const selected = services.filter((service) => service.getAttribute('aria-pressed') === 'true');
+    const total = selected.reduce((sum, service) => sum + Number(service.dataset.cents), 0);
     const base = Math.round(total * 100 / 121);
-    summary.querySelector('[data-base]').textContent = format(base);
-    summary.querySelector('[data-tax]').textContent = format(total - base);
-    summary.querySelector('[data-total]').textContent = format(total);
+    setText('[data-base]', format(base));
+    setText('[data-tax]', format(total - base));
+    setText('[data-total]', format(total));
+    for (const list of root.querySelectorAll('[data-lines]')) {
+      list.replaceChildren(...selected.map((service) => line(service.dataset[list.dataset.lines], format(Number(service.dataset.cents)))));
+    }
     submit.disabled = total === 0;
+    status.textContent = total === 0 ? root.dataset.empty : root.dataset.idle;
+    status.classList.remove('done');
   }
 
   for (const service of services) {
     service.addEventListener('click', () => {
-      const selected = service.getAttribute('aria-pressed') !== 'true';
-      service.setAttribute('aria-pressed', String(selected));
-      service.querySelector('.service-check path').setAttribute('d', selected ? 'm5 12 4 4L19 6' : 'M12 5v14M5 12h14');
-      updateSummary();
+      service.setAttribute('aria-pressed', String(service.getAttribute('aria-pressed') !== 'true'));
+      update();
     });
   }
 
+  for (const input of root.querySelectorAll('input[name="payment"]')) {
+    input.addEventListener('change', () => setText('[data-payment]', input.value));
+  }
+
   submit.addEventListener('click', () => {
-    receiptItems.replaceChildren(...selectedServices().map((service) => {
-      const row = document.createElement('li');
-      const label = document.createElement('span');
-      const amount = document.createElement('strong');
-      label.textContent = service.querySelector('[data-service-name]').textContent;
-      amount.textContent = format(Number(service.dataset.cents));
-      row.append(label, amount);
-      return row;
-    }));
-
-    const payment = document.createElement('div');
-    const label = document.createElement('dt');
-    const value = document.createElement('dd');
-    label.textContent = 'Thanh toán';
-    value.textContent = root.querySelector('input[name="payment"]:checked').value;
-    payment.append(label, value);
-
-    receiptTotals.replaceChildren(...summary.cloneNode(true).children, payment);
-    dialog.showModal();
+    paper.classList.remove('printing');
+    void paper.offsetWidth;
+    paper.classList.add('printing');
+    status.textContent = root.dataset.done;
+    status.classList.add('done');
+    if (matchMedia('(max-width: 1020px)').matches) paper.scrollIntoView({ block: 'start' });
   });
 
-  updateSummary();
+  // Trình duyệt có thể giữ lựa chọn thanh toán khi tải lại trang.
+  setText('[data-payment]', root.querySelector('input[name="payment"]:checked').value);
 }
